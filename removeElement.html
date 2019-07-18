@@ -16,9 +16,15 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nihil voluptatibus. Culpa dolor eius explicabo fuga vel! Alias, aliquid beatae corporis exercitationem explicabo ipsum molestias nesciunt reiciendis reprehenderit sint velit.</p>
 </div>
 
+<div class="test" style="background-color: red;color: white;width: 250px;height: 250px;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, nihil voluptatibus. Culpa dolor eius explicabo fuga vel! Alias, aliquid beatae corporis exercitationem explicabo ipsum molestias nesciunt reiciendis reprehenderit sint velit.</p>
+</div>
+
 <br>
 <button id="btn1">remove</button>
 <button id="btn2">empty</button>
+<button id="btn3">multiple remove</button>
+<button id="btn4">multiple empty</button>
 
 <script>
     $(document).on('click', '#btn1', function () {
@@ -26,6 +32,12 @@
     });
     $(document).on('click', '#btn2', function () {
         $('.element').empty();
+    });
+    $(document).on('click', '#btn3', function () {
+        $('div').remove('.element,.test');
+    });
+    $(document).on('click', '#btn4', function () {
+        $('div').empty('.element,.test');
     });
 
 </script>
