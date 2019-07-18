@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body{
+            margin: 10px auto;
+            border: 2px solid #000;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+
+<p id="test">add element using append, prepend,before and after</p>
+<input type="text" value="my name" class="name" placeholder="name">
+<input type="email" value="my name" class="email" placeholder="email">
+
+<br>
+<button id="btn1">append name</button>
+<button id="btn2">append email</button>
+<button id="btn3">append email</button>
+<button id="btn4">append email</button>
+
+<script>
+    $(document).on('click', '#btn1', function () {
+        $('p').append(' this text is appended');
+    });
+    $(document).on('click', '#btn2', function () {
+        $('p').prepend(' this text is prepended');
+    });
+    $(document).on('click', '#btn3', function(){
+        $('.name').before(' this text comes by before event ');
+    });
+    $(document).on('click','#btn4', function () {
+        $('.email').after(' this text comes by after event ')
+    })
+</script>
+
+</body>
+</html>
