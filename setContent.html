@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body{
+            margin: 10px auto;
+            border: 2px solid #000;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+
+<p id="test">set value using <b>jquery</b> content (html, text and val)</p>
+<input type="text" value="my name" class="name">
+
+<button id="btn1">set html</button>
+<button id="btn2">set text</button>
+<button id="btn3">set value</button>
+
+<script>
+    $(document).on('click', '#btn1', function () {
+        $('#test').html('this <b>value</b> is set');
+    });
+    $(document).on('click', '#btn2', function () {
+        $('#test').text('this text is set');
+    });
+    $(document).on('click', '#btn3', function(){
+        $('.name').val('arefin');
+    });
+</script>
+
+</body>
+</html>
